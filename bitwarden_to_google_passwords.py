@@ -1,26 +1,16 @@
 #!/usr/local/bin/python3
 
-import sys, getopt, csv
+import sys, csv
 
 def main(argv):
     inputfile = ''
-    outputfile = ''
-    try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
-    except getopt.GetoptError:
-        print ('test.py -i <inputfile> -o <outputfile>')
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print ('test.py -i <inputfile> -o <outputfile>')
-            sys.exit()
-        elif opt in ("-i", "--ifile"):
-            inputfile = arg
-        elif opt in ("-o", "--ofile"):
-            outputfile = arg
-    print ('Input file is "', inputfile)
-    print ('Output file is "', outputfile)
-
+    i = len(sys.argv)
+    if ((i == 1) or (i > 2)):
+        print ("Usage: bitwarden_to_google_passwords.py <bitwarden csv file>")
+        exit()
+    else:
+        inputfile = str (sys.argv[1])
+    
     with open ("chrome_passwords.csv", 'w', newline = '') as google_csv:
         google_writer = csv.writer (google_csv, delimiter = ',', quoting=csv.QUOTE_MINIMAL)
         google_writer.writerow (['name', 'url', 'username', 'password'])
