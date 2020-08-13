@@ -18,8 +18,9 @@ In order to try all the new functionality I needed to get my passwords from Bitw
 
 * The Bitwarden export is not in a format that Chrome can import directly.
 
-Alas I had to write this converter
+Alas I had to write this converter to get my passwords over.
 
+# Usage
 
 1. Go to [https://vault.bitwarden.com/#/tools/export](https://vault.bitwarden.com/#/tools/export) and export your passwords in CSV format
 
@@ -36,3 +37,9 @@ Alas I had to write this converter
 ![alt text](https://github.com/koehntopp/bitwarden_to_chrome_passwords/blob/master/Readme/import-menu.png?raw=true)
 
 5. There is no step 5.
+
+# Version History
+
+* 1.0 as of 2020-08-13 Initial version
+
+** Only exports itemps of type "login" with associated name, URL, user name and password
