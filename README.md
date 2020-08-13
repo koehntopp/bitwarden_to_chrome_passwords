@@ -26,7 +26,7 @@ Alas I had to write this converter to get my passwords over.
 
 ![alt text](https://github.com/koehntopp/bitwarden_to_chrome_passwords/blob/master/Readme/bitwarden-export.png?raw=true)
 
-2. Run **"python3 bitwarden_to_google_passwords.py <bitwarden csv>"**. This will generate a file called **"chrome_passwords.csv"** in the same directory. 
+2. Run **"python3 bitwarden_to_google_passwords.py bitwarden csv>"**. This will generate a file called **"chrome_passwords.csv"** in the same directory. 
 
 3. Type [chrome://flags/#password-import-export](chrome://flags/#password-import-export) into the address bar and enable the password import option
 
