@@ -42,4 +42,4 @@ Alas I had to write this converter to get my passwords over.
 
 * 1.0 as of 2020-08-13 Initial version
 
-** Only exports itemps of type "login" with associated name, URL, user name and password
+  * Only exports itemps of type "login" with associated name, URL, user name and password
