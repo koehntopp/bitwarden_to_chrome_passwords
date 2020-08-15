@@ -17,8 +17,12 @@ def main(argv):
         with open (inputfile, newline = '') as bitwarden_csv:
             bitwarden_reader = csv.reader(bitwarden_csv, delimiter = ',')
             for row in bitwarden_reader:
+                # Vault Export
                 if (row[2] == 'login'):
                     google_writer.writerow ([row[3], row[6], row[7], row[8]])
+                # Organization export (shared passwords are not in your vault!)
+                if (row[1] == 'login'):
+                    google_writer.writerow ([row[2], row[5], row[6], row[7]])
 
 
 
