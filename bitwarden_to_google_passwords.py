@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3
 
+# Version 1.1 as of 2020-08-18
+# (C) 2020 Frank Köhntopp frank@koehntopp.com
+
 import sys, csv
 
 def main(argv):
